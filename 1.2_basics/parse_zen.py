@@ -29,3 +29,18 @@ If the implementation is hard to explain, it's a bad idea.
 If the implementation is easy to explain, it may be a good idea.
 Namespaces are one honking great idea -- let's do more of those!"""
 
+# One possible answer.  Splitting on whitespace:
+for word in zen.split():
+    #if word[0] == 'i':
+    if word.startswith('i'):
+        print word
+
+# Another way using list comprehension
+print [x for x in zen.split() if x.startswith('i')]
+
+# reading from a file, reading line by line:
+with open('zen.txt', 'r') as zen_file:
+    for line in zen_file.readlines():
+        for word in line.split():
+            if word.startswith('i'):
+                print word
