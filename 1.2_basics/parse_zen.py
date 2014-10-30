@@ -31,8 +31,10 @@ Namespaces are one honking great idea -- let's do more of those!"""
 
 # One possible answer.  Splitting on whitespace:
 for word in zen.split():
-    #if word[0] == 'i':
-    if word.startswith('i'):
+    #if word[0] == 'i' or word[0] == 'I':
+    #if word[0] in ('i', 'I'):
+    word_lowercase = word.lower()
+    if word_lowercase.startswith('i'):
         print word
 
 # Another way using list comprehension
@@ -42,5 +44,6 @@ print [x for x in zen.split() if x.startswith('i')]
 with open('zen.txt', 'r') as zen_file:
     for line in zen_file.readlines():
         for word in line.split():
-            if word.startswith('i'):
+            word_lowercase = word.lower()
+            if word_lowercase.startswith('i'):
                 print word
