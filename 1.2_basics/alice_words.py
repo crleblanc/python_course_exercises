@@ -3,6 +3,7 @@
 from __future__ import print_function
 import argparse
 import collections
+import re
 
 # Exercise: Write a python program that accepts a command line argument
 # for a filename (alice_in_wonderland.txt).  Create a function that opens this
@@ -60,6 +61,12 @@ def count_words(input_file):
     # Counter is a generator, so we loop over this object to get it's results
     return collections.Counter(word_count).most_common()
 
+def count_words_tiny(input_file):
+    """Tiny example inspired by collections.Counter() example code"""
+
+    with open(input_file, 'r') as fobj:
+        words = re.findall(r'\w+', fobj.read().lower())
+        return collections.Counter(words).most_common()
 
 if __name__ == '__main__':
 
@@ -68,3 +75,5 @@ if __name__ == '__main__':
 
     for word, count in count_words(args.input_file):
         print(word, count)
+    #for word, count in count_words_tiny(args.input_file):
+    #    print word, count
