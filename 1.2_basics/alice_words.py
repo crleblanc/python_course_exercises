@@ -3,10 +3,13 @@
 import argparse
 
 # Exercise: Write a python program that accepts a command line argument
-# for a filename (alice_in_wonderland.txt).  Create a function that opens this 
+# for a filename (alice_in_wonderland.txt).  Create a function that opens this
 # file and counts the number of unique words (lowercase) without punctuation.
-# Finally print the word and the number of times it occurs, ordered from most 
+# Finally print the word and the number of times it occurs, ordered from most
 # common to least common.
+#
+# Hint: Look into collections.Counter() for a time saving feature:
+# https://docs.python.org/2/library/collections.html#counter-objects
 #
 # Note: alice_in_wonderland.txt freely available from http://www.gutenberg.org
 
