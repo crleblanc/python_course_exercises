@@ -6,9 +6,8 @@
 # Exercise: create a new class that inherits from Car(), call it Tesla.
 # Unlike the normal car that has a 5 speed transmission our Tesla has
 # reverse neutral (for this exercise) and one forward gear.  Write a new
-# method for the Tesla class that overloads the shift method of the Car
-# class.  This should only accept -1 (reverse), 0 (neutral) or 1 (forwards).
-# Check with a unit test.
+# method for the Tesla class that will only accept -1 (reverse), 0 
+#(neutral) or 1 (forwards).  Check with a unit test.
 
 import unittest
 
@@ -29,6 +28,7 @@ class Car(object):
 
         self.gear = gear
 
+
 # Unit tests:
 class TestClass(unittest.TestCase):
 
@@ -37,13 +37,17 @@ class TestClass(unittest.TestCase):
         # check the default gear, neutral
         self.assertEqual(my_car.gear, 0)
 
+        # check shifting into reverse gear
+        my_car.shift(-1)
+        self.assertEqual(my_car.gear, -1)
+
         # check shifting into first gear
         my_car.shift(1)
         self.assertEqual(my_car.gear, 1)
 
         # check shifting into a gear we don't have
-        self.assertRaises(ValueError, my_car.shift, 10)
-
+        self.assertRaises(ValueError, my_car.shift, -2)
+        self.assertRaises(ValueError, my_car.shift, 5)
 
     def testTesla(self):
         """Test our new Tesla class"""
