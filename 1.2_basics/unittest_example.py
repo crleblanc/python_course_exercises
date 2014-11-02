@@ -9,6 +9,7 @@
 # method for the ElectricCar class that will only accept -1 (reverse), 0 
 # (neutral) or 1 (forwards).  Check with a unit test.
 
+from __future__ import print_function
 import unittest
 
 class Car(object):
@@ -28,6 +29,11 @@ class Car(object):
 
         self.gear = gear
 
+class ElectricCar(Car):
+
+    def __init__(self):
+        super(ElectricCar, self).__init__()
+        self.top_gear = 1
 
 # Unit tests:
 class TestClass(unittest.TestCase):
