@@ -24,7 +24,9 @@ def main():
 
         # display the amplitudes
         trace_array = np.array(trace_data)
-        plt.imshow(trace_array.T, cmap=plt.cm.gray, aspect=0.05)
+
+        fig = plt.figure(figsize=(20, 10))
+        plt.imshow(trace_array.T, cmap=plt.cm.gray, aspect=0.01)
         plt.show()
 
 if __name__ == '__main__':
