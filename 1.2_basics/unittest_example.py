@@ -50,7 +50,7 @@ class TestClass(unittest.TestCase):
         self.assertRaises(ValueError, my_car.shift, 5)
 
     def testElectricCar(self):
-        """Test our new Tesla class"""
+        """Test our new ElectricCar class"""
         pass
 
 if __name__ == '__main__':
