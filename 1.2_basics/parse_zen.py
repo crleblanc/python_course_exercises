@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # Note: the line above tells the shell how to run this file.  Not mandatory but recommended.
 
-# Exercise 1: Parse each word in the string called zen (already created below as a multiline string)
+# Exercise: Parse each word in the string called zen (already created below as a multiline string)
 # and print out all words that start with the letter "i" or "I".
 #
 # Hints: Use string.split() to split each word, and use a for 

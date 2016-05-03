@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+from __future__ import print_function
 import argparse
 
 # Exercise: Write a python program that accepts a command line argument
@@ -27,5 +28,4 @@ if __name__ == '__main__':
     # A simple alternative to argparse is to use sys.argv, but this requires more error handling.
     args = command_line_args()
 
-    print 'argparse input_file:', args.input_file
-
+    print('argparse input_file:', args.input_file)

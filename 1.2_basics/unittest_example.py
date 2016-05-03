@@ -3,11 +3,11 @@
 # Example unit test using the unittest module, showing a Python class,
 # methods, exceptions, assertions.
 #
-# Exercise: create a new class that inherits from Car(), call it Tesla.
-# Unlike the normal car that has a 5 speed transmission our Tesla has
+# Exercise: create a new class that inherits from Car(), call it ElectricCar.
+# Unlike the normal car that has a 5 speed transmission our ElectricCar has
 # reverse neutral (for this exercise) and one forward gear.  Write a new
-# method for the Tesla class that will only accept -1 (reverse), 0 
-#(neutral) or 1 (forwards).  Check with a unit test.
+# method for the ElectricCar class that will only accept -1 (reverse), 0 
+# (neutral) or 1 (forwards).  Check with a unit test.
 
 import unittest
 
@@ -49,7 +49,7 @@ class TestClass(unittest.TestCase):
         self.assertRaises(ValueError, my_car.shift, -2)
         self.assertRaises(ValueError, my_car.shift, 5)
 
-    def testTesla(self):
+    def testElectricCar(self):
         """Test our new Tesla class"""
         pass
 
