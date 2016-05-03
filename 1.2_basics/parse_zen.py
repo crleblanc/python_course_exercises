@@ -7,6 +7,8 @@
 # Hints: Use string.split() to split each word, and use a for 
 # loop to loop over them testing the first character of each word.
 
+from __future__ import print_function
+
 zen="""The Zen of Python, by Tim Peters
 
 Beautiful is better than ugly.
@@ -35,15 +37,15 @@ for word in zen.split():
     #if word[0] in ('i', 'I'):
     word_lowercase = word.lower()
     if word_lowercase.startswith('i'):
-        print word
+        print(word)
 
-# Another way using list comprehension
-print [x for x in zen.split() if x.startswith('i')]
+## Another way using list comprehension
+# print([x for x in zen.split() if x.startswith('i')])
 
-# reading from a file, reading line by line:
-with open('zen.txt', 'r') as zen_file:
-    for line in zen_file.readlines():
-        for word in line.split():
-            word_lowercase = word.lower()
-            if word_lowercase.startswith('i'):
-                print word
+## Reading from a file, reading line by line:
+# with open('zen.txt', 'r') as zen_file:
+#     for line in zen_file.readlines():
+#         for word in line.split():
+#             word_lowercase = word.lower()
+#             if word_lowercase.startswith('i'):
+#                 print(word)
