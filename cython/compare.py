@@ -3,6 +3,7 @@
 # Comparison of Python/Numpy version of the mandelbrot versus a basic Cython implementation,
 # more for a Cython demo than a performance comparison.
 
+from __future__ import print_function
 import time
 from matplotlib import pylab as plt
 from mandelbrot_python import mandel_numpy
@@ -17,7 +18,7 @@ def compare_runs():
     cy_output = mandel_cython(n_pixels, max_iterations)
     t3 = time.time()
 
-    print "Time for python=%f second, %f for cython." % (t2-t1, t3-t2)
+    print("Time for python=%f second, %f for cython." % (t2-t1, t3-t2))
 
     # plot results
     f, axes = plt.subplots(2)

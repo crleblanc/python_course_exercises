@@ -17,7 +17,7 @@ def mandel_numpy(n=400,maxi=512):
     escape = N.empty((n,n),'int32')
     escape[:,:] = maxi                  # default result
 
-    for i in xrange(1,maxi):
+    for i in range(1, maxi):
         mask = (escape == maxi)         # find out which points have not escaped
                                         # yet (results in a boolean array)
 

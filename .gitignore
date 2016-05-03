@@ -52,3 +52,7 @@ docs/_build/
 
 # PyBuilder
 target/
+
+python_course_exercises.iml
+.idea
+cython/mandelbrot_cython.c
