@@ -39,11 +39,11 @@ def count_words(input_file):
             words = line.split()
 
             for word in words:
-                # filter out non alphabetical characters using filter.
-                word = filter(str.isalpha, word)
+                # Python 2 version using filter out non alphabetical characters using filter (eg: ' ` % . / \ )
+                #word = filter(str.isalpha, word)
 
                 # different approach with same result:
-                #words = ''.join(x for x in words if x.isalpha)
+                word = ''.join(x for x in word if x.isalpha())
 
                 if len(word) == 0:
                     continue
