@@ -4,6 +4,7 @@
 # uses HDF5 for it's internal data format.  Open an example file and look at the
 # data and trace headers.
 
+from __future__ import print_function
 import numpy as np
 import h5py
 import pandas as pd
@@ -20,7 +21,7 @@ def main():
         # Make a Pandas object out of the 'record array' like object from h5py
         headers_dframe = pd.DataFrame(np.array(trace_headers))
 
-        print headers_dframe
+        print(headers_dframe)
 
         # display the amplitudes
         trace_array = np.array(trace_data)

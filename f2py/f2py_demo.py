@@ -2,6 +2,7 @@
 # Demo using f2py to call Fortran code from Python.
 # Use "f2py -c -m fib3 fib3.f" to create the Python extension module.
 
+from __future__ import print_function
 import numpy as np
 # the Fibonacci module created by f2py:
 import fib3
@@ -15,7 +16,7 @@ def main():
     fib3.fib(worker_array, worker_array.size)
 
     # Hopefully we see the fibonacci series output
-    print worker_array
+    print(worker_array)
 
 if __name__ == '__main__':
     main()
