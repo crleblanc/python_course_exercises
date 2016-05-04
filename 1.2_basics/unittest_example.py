@@ -57,7 +57,18 @@ class TestClass(unittest.TestCase):
 
     def testElectricCar(self):
         """Test our new ElectricCar class"""
-        pass
+
+        my_car = ElectricCar()
+        self.assertEqual(my_car.gear, 0)
+
+        my_car.shift(-1)
+        self.assertEqual(my_car.gear, -1)
+
+        my_car.shift(1)
+        self.assertEqual(my_car.gear, 1)
+
+        self.assertRaises(ValueError, my_car.shift, -2)
+        self.assertRaises(ValueError, my_car.shift, 2)
 
 if __name__ == '__main__':
     unittest.main()
